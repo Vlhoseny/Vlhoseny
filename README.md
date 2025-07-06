@@ -4,7 +4,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=vlhoseny&label=Profile%20views&color=0e75b6&style=flat" alt="vlhoseny" /> </p>
 
-- 🌱 I’m currently learning **Web pentesting & SOC!**
+- 🌱 I’m currently learning **SOC & DevOps!**
 
 - 📫 How to reach me **Mohamedabdulrahim4work@gmail.com**
 
