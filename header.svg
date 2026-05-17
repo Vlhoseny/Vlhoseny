@@ -2,124 +2,119 @@
   <defs>
     <style>
       @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+      @keyframes fadeIn1 { 0%,4%{opacity:0} 8%,85%{opacity:1} 90%,100%{opacity:0} }
+      @keyframes fadeIn2 { 0%,8%{opacity:0} 12%,85%{opacity:1} 90%,100%{opacity:0} }
+      @keyframes fadeIn3 { 0%,12%{opacity:0} 16%,85%{opacity:1} 90%,100%{opacity:0} }
+      @keyframes fadeIn4 { 0%,16%{opacity:0} 20%,85%{opacity:1} 90%,100%{opacity:0} }
+      @keyframes fadeIn5 { 0%,20%{opacity:0} 24%,85%{opacity:1} 90%,100%{opacity:0} }
+      @keyframes fadeIn6 { 0%,24%{opacity:0} 28%,85%{opacity:1} 90%,100%{opacity:0} }
+      @keyframes fadeIn7 { 0%,28%{opacity:0} 32%,85%{opacity:1} 90%,100%{opacity:0} }
+      @keyframes finalShow { 0%,90%{opacity:0} 94%,100%{opacity:1} }
+      @keyframes cursorType { 0%,7%{opacity:0} 8%,32%{opacity:1} 33%,85%{opacity:0} 86%,100%{opacity:0} }
+      @keyframes glow { 0%,100%{opacity:.6} 50%{opacity:1} }
 
-      /* Line 1: prompt + command */
-      @keyframes w1 { 0%{width:0} 6%{width:235px} 86%{width:235px} 92%{width:0} 100%{width:0} }
-      /* Lines 2-6: output lines */
-      @keyframes w2 { 0%{width:0} 6%{width:0} 12%{width:390px} 86%{width:390px} 92%{width:0} 100%{width:0} }
-      @keyframes w3 { 0%{width:0} 12%{width:0} 18%{width:390px} 86%{width:390px} 92%{width:0} 100%{width:0} }
-      @keyframes w4 { 0%{width:0} 18%{width:0} 24%{width:390px} 86%{width:390px} 92%{width:0} 100%{width:0} }
-      @keyframes w5 { 0%{width:0} 24%{width:0} 30%{width:390px} 86%{width:390px} 92%{width:0} 100%{width:0} }
-      @keyframes w6 { 0%{width:0} 30%{width:0} 36%{width:390px} 86%{width:390px} 92%{width:0} 100%{width:0} }
-      @keyframes w7 { 0%{width:0} 36%{width:0} 42%{width:280px} 86%{width:280px} 92%{width:0} 100%{width:0} }
-
-      /* Opacity fade for typing block */
-      @keyframes fadeBlock { 0%,86%{opacity:1} 92%,100%{opacity:0} }
-
-      /* Final text appears after deletion */
-      @keyframes appearFinal { 0%,92%{opacity:0} 94%{opacity:0;transform:translateY(8px)} 98%{opacity:1;transform:translateY(0)} 100%{opacity:1;transform:translateY(0)} }
-
-      .cw1 { animation: w1 75s ease-in-out infinite }
-      .cw2 { animation: w2 75s ease-in-out infinite }
-      .cw3 { animation: w3 75s ease-in-out infinite }
-      .cw4 { animation: w4 75s ease-in-out infinite }
-      .cw5 { animation: w5 75s ease-in-out infinite }
-      .cw6 { animation: w6 75s ease-in-out infinite }
-      .cw7 { animation: w7 75s ease-in-out infinite }
-      .fadeBlock { animation: fadeBlock 75s ease-in-out infinite }
-      .finalGroup { animation: appearFinal 75s ease-in-out infinite }
-    .fcursor { animation: blink 0.7s step-end infinite }
+      .l1 { animation: fadeIn1 75s ease-in-out infinite }
+      .l2 { animation: fadeIn2 75s ease-in-out infinite }
+      .l3 { animation: fadeIn3 75s ease-in-out infinite }
+      .l4 { animation: fadeIn4 75s ease-in-out infinite }
+      .l5 { animation: fadeIn5 75s ease-in-out infinite }
+      .l6 { animation: fadeIn6 75s ease-in-out infinite }
+      .l7 { animation: fadeIn7 75s ease-in-out infinite }
+      .final { animation: finalShow 75s ease-in-out infinite }
+      .typec { animation: cursorType 75s step-end infinite }
+      .blink { animation: blink .7s step-end infinite }
+      .glow { animation: glow 2s ease-in-out infinite }
     </style>
-
-    <clipPath id="cw1"><rect class="cw1" x="0" y="0" height="24"/></clipPath>
-    <clipPath id="cw2"><rect class="cw2" x="0" y="0" height="22"/></clipPath>
-    <clipPath id="cw3"><rect class="cw3" x="0" y="0" height="22"/></clipPath>
-    <clipPath id="cw4"><rect class="cw4" x="0" y="0" height="22"/></clipPath>
-    <clipPath id="cw5"><rect class="cw5" x="0" y="0" height="22"/></clipPath>
-    <clipPath id="cw6"><rect class="cw6" x="0" y="0" height="22"/></clipPath>
-    <clipPath id="cw7"><rect class="cw7" x="0" y="0" height="22"/></clipPath>
   </defs>
 
-  <!-- Chassis -->
+  <!-- Background -->
   <rect width="900" height="250" fill="#0a0a0a" rx="10"/>
   <rect x="3" y="3" width="894" height="244" fill="none" stroke="#3a0a0a" stroke-width="2" rx="8"/>
   <rect x="6" y="6" width="888" height="238" fill="none" stroke="rgba(248,0,0,0.04)" stroke-width="1" rx="6"/>
 
-  <!-- Scanline texture -->
+  <!-- Scan texture -->
   <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-    <line x1="0" y1="0" x2="4" y2="0" stroke="rgba(248,0,0,0.035)" stroke-width="1"/>
+    <line x1="0" y1="0" x2="4" y2="0" stroke="rgba(248,0,0,0.04)" stroke-width="1"/>
   </pattern>
   <rect width="900" height="250" fill="url(#scan)"/>
 
+  <!-- Ambient glow -->
+  <rect x="30" y="50" width="840" height="185" fill="none" stroke="rgba(248,0,0,0.05)" stroke-width="1" rx="4"/>
+
   <!-- Title bar -->
   <rect x="30" y="15" width="840" height="28" fill="#111" rx="4"/>
-  <circle cx="48" cy="29" r="5" fill="#ff5555"/>
-  <circle cx="66" cy="29" r="5" fill="#ffaa33"/>
-  <circle cx="84" cy="29" r="5" fill="#55cc55"/>
-  <text x="450" y="34" text-anchor="middle" fill="#666" font-family="'Courier New',monospace" font-size="11" font-weight="bold">0xVSTVB0Y — ORACLE TERMINAL v2.5</text>
+  <circle cx="48" cy="29" r="4.5" fill="#ff5555"/>
+  <circle cx="66" cy="29" r="4.5" fill="#ffaa33"/>
+  <circle cx="84" cy="29" r="4.5" fill="#55cc55"/>
+  <text x="450" y="34" text-anchor="middle" fill="#666" font-family="'Courier New',monospace" font-size="11" font-weight="bold">0xVSTVB0Y — ORACLE TERMINAL</text>
   <text x="800" y="34" text-anchor="end" fill="#444" font-family="'Courier New',monospace" font-size="10">bash 5.2</text>
 
-  <!-- ===== TYPING BLOCK (types, waits 50s, then deletes) ===== -->
-  <g class="fadeBlock">
+  <!-- TYPING PHASE: each line fades in sequentially, stays ~50s, fades out -->
 
-    <!-- Line 1: command prompt -->
-    <g clip-path="url(#cw1)">
-      <text x="50" y="75" fill="#f80000" font-family="'Courier New',monospace" font-size="17" font-weight="bold">vstvb0y@oracle:~$</text>
-      <text x="270" y="75" fill="#ffcc00" font-family="'Courier New',monospace" font-size="17">cat .profile</text>
-    </g>
-
-    <!-- Line 2: name -->
-    <g clip-path="url(#cw2)">
-      <text x="70" y="106" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
-      <text x="82" y="106" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
-      <text x="112" y="106" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
-      <text x="130" y="106" fill="#fff" font-family="'Courier New',monospace" font-size="15" font-weight="bold">Mohamed A. Abdelkhaleq</text>
-    </g>
-
-    <!-- Line 3: title -->
-    <g clip-path="url(#cw3)">
-      <text x="70" y="133" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
-      <text x="82" y="133" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
-      <text x="112" y="133" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
-      <text x="130" y="133" fill="#ddd" font-family="'Courier New',monospace" font-size="15">Fusion Middleware Engineer</text>
-    </g>
-
-    <!-- Line 4: oracle ace -->
-    <g clip-path="url(#cw4)">
-      <text x="70" y="160" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
-      <text x="82" y="160" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
-      <text x="112" y="160" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
-      <text x="130" y="160" fill="#ffcc00" font-family="'Courier New',monospace" font-size="15">Oracle ACE Associate</text>
-    </g>
-
-    <!-- Line 5: stack -->
-    <g clip-path="url(#cw5)">
-      <text x="70" y="187" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
-      <text x="82" y="187" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
-      <text x="112" y="187" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
-      <text x="130" y="187" fill="#aaa" font-family="'Courier New',monospace" font-size="15">Stack: OCI · WebLogic 12c/14c · SOA · OSB</text>
-    </g>
-
-    <!-- Line 6: certs -->
-    <g clip-path="url(#cw6)">
-      <text x="70" y="214" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
-      <text x="82" y="214" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
-      <text x="112" y="214" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
-      <text x="130" y="214" fill="#aaa" font-family="'Courier New',monospace" font-size="15">Certs: OCI Foundations · OCI Architect · WebLogic</text>
-    </g>
-
+  <!-- Line 1: prompt -->
+  <g class="l1">
+    <text x="50" y="75" fill="#f80000" font-family="'Courier New',monospace" font-size="17" font-weight="bold">vstvb0y@oracle:~$</text>
+    <text x="270" y="75" fill="#ffcc00" font-family="'Courier New',monospace" font-size="17">cat .profile</text>
+    <rect x="385" y="78" width="9" height="14" fill="#ffcc00" class="typec" rx="1"/>
   </g>
 
-  <!-- ===== FINAL STATE (appears after delete, stays forever) ===== -->
-  <g class="finalGroup">
-    <text x="50" y="110" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">vstvb0y@oracle:~$</text>
-    <text x="200" y="110" fill="#ffcc00" font-family="'Courier New',monospace" font-size="15">whoami</text>
-    <rect x="330" y="113" width="9" height="14" fill="#ffcc00" class="fcursor" rx="1"/>
+  <!-- Line 2: name -->
+  <g class="l2">
+    <text x="70" y="106" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
+    <text x="82" y="106" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
+    <text x="112" y="106" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
+    <text x="130" y="106" fill="#fff" font-family="'Courier New',monospace" font-size="15" font-weight="bold">Mohamed A. Abdelkhaleq</text>
+  </g>
 
-    <text x="70" y="145" fill="#f80000" font-family="'Courier New',monospace" font-size="13" font-weight="bold">➜</text>
-    <text x="95" y="145" fill="#fff" font-family="'Courier New',monospace" font-size="16" font-weight="bold">Mohamed A. Abdelkhaleq</text>
+  <!-- Line 3: title -->
+  <g class="l3">
+    <text x="70" y="133" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
+    <text x="82" y="133" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
+    <text x="112" y="133" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
+    <text x="130" y="133" fill="#ddd" font-family="'Courier New',monospace" font-size="15">Fusion Middleware Engineer</text>
+  </g>
 
-    <text x="95" y="172" fill="#aaa" font-family="'Courier New',monospace" font-size="13">Fusion Middleware Engineer · Oracle ACE Associate</text>
-    <text x="95" y="198" fill="#777" font-family="'Courier New',monospace" font-size="12">OCI · WebLogic 12c/14c · SOA · OSB · Docker · Python · Git</text>
+  <!-- Line 4: ace -->
+  <g class="l4">
+    <text x="70" y="160" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
+    <text x="82" y="160" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
+    <text x="112" y="160" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
+    <text x="130" y="160" fill="#ffcc00" font-family="'Courier New',monospace" font-size="15">Oracle ACE Associate</text>
+  </g>
+
+  <!-- Line 5: stack -->
+  <g class="l5">
+    <text x="70" y="187" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
+    <text x="82" y="187" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
+    <text x="112" y="187" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
+    <text x="130" y="187" fill="#aaa" font-family="'Courier New',monospace" font-size="15">Stack: OCI · WebLogic 12c/14c · SOA · OSB</text>
+  </g>
+
+  <!-- Line 6: certs -->
+  <g class="l6">
+    <text x="70" y="214" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
+    <text x="82" y="214" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
+    <text x="112" y="214" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
+    <text x="130" y="214" fill="#aaa" font-family="'Courier New',monospace" font-size="15">Certs: OCI Foundations · OCI Architect · WebLogic</text>
+  </g>
+
+  <!-- FINAL STATE: appears after typing block disappears -->
+  <g class="final">
+    <!-- Prompt -->
+    <text x="50" y="110" fill="#f80000" font-family="'Courier New',monospace" font-size="16" font-weight="bold">vstvb0y@oracle:~$</text>
+    <text x="200" y="110" fill="#ffcc00" font-family="'Courier New',monospace" font-size="16">whoami</text>
+
+    <!-- Arrow + Name -->
+    <text x="70" y="148" fill="#f80000" font-family="'Courier New',monospace" font-size="14" font-weight="bold">➜</text>
+    <text x="95" y="148" fill="#fff" font-family="'Courier New',monospace" font-size="17" font-weight="bold">Mohamed A. Abdelkhaleq</text>
+
+    <!-- Title -->
+    <text x="95" y="176" fill="#aaa" font-family="'Courier New',monospace" font-size="13">Fusion Middleware Engineer · Oracle ACE Associate</text>
+
+    <!-- Skills line -->
+    <text x="95" y="202" fill="#777" font-family="'Courier New',monospace" font-size="12">OCI · WebLogic 12c/14c · SOA · OSB · Docker · Python · Git</text>
+
+    <!-- Blinking cursor -->
+    <rect x="340" y="113" width="9" height="14" fill="#ffcc00" class="blink" rx="1"/>
   </g>
 </svg>
