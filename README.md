@@ -15,7 +15,7 @@
 
 <div align="center">
 
-[![Oracle](https://skillicons.dev/icons?i=oracle)](https://www.oracle.com)
+[![Oracle](https://www.dynatrace.com/hub/detail/oracle-cloud-infrastructure/)](https://www.oracle.com)
 [![AWS](https://skillicons.dev/icons?i=aws)](https://aws.amazon.com/)
 [![Docker](https://skillicons.dev/icons?i=docker)](https://docker.com)
 [![Jenkins](https://skillicons.dev/icons?i=jenkins)](https://jenkins.io)
