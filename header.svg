@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220">
+  <defs>
+    <style>
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+      @keyframes type1 { 0%{width:0} 25%{width:0} 40%{width:132px} 100%{width:132px} }
+      @keyframes type2 { 0%{width:0} 40%{width:0} 55%{width:156px} 100%{width:156px} }
+      @keyframes type3 { 0%{width:0} 55%{width:0} 70%{width:336px} 100%{width:336px} }
+      @keyframes type4 { 0%{width:0} 70%{width:0} 85%{width:360px} 100%{width:360px} }
+      @keyframes scanMove { 0%{transform:translateY(-220px)} 100%{transform:translateY(440px)} }
+      @keyframes glow { 0%,100%{opacity:.7} 50%{opacity:1} }
+      .cursor { animation: blink .7s step-end infinite }
+      .clip1 { animation: type1 6s steps(22) forwards }
+      .clip2 { animation: type2 6s steps(26) forwards }
+      .clip3 { animation: type3 6s steps(56) forwards }
+      .clip4 { animation: type4 6s steps(60) forwards }
+      .scanline { animation: scanMove 4s linear infinite }
+      .glow { animation: glow 2s ease-in-out infinite }
+    </style>
+    <clipPath id="c1"><rect class="clip1" x="0" y="0" height="20"/></clipPath>
+    <clipPath id="c2"><rect class="clip2" x="0" y="0" height="20"/></clipPath>
+    <clipPath id="c3"><rect class="clip3" x="0" y="0" height="20"/></clipPath>
+    <clipPath id="c4"><rect class="clip4" x="0" y="0" height="20"/></clipPath>
+    <filter id="crt">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
+      <feBlend in="SourceGraphic" in2="grayNoise" mode="overlay" result="crtResult"/>
+    </filter>
+  </defs>
+
+  <!-- Chassis -->
+  <rect width="900" height="220" fill="#0c0c0c" rx="10"/>
+  <rect x="3" y="3" width="894" height="214" fill="none" stroke="#1a3a1a" stroke-width="2" rx="8"/>
+  <rect x="6" y="6" width="888" height="208" fill="none" stroke="rgba(0,255,65,0.04)" stroke-width="1" rx="6"/>
+
+  <!-- Ambient glow edges -->
+  <rect x="6" y="6" width="888" height="208" fill="none" stroke="rgba(0,255,65,0.06)" stroke-width="1" rx="6"/>
+
+  <!-- Scanline overlay -->
+  <g class="scanline" opacity="0.04">
+    <line x1="0" y1="0" x2="900" y2="0" stroke="#00ff41" stroke-width="3"/>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="30" y="18" width="840" height="28" fill="#161616" rx="4"/>
+  <circle cx="48" cy="32" r="5" fill="#ff5555"/>
+  <circle cx="66" cy="32" r="5" fill="#ffaa33"/>
+  <circle cx="84" cy="32" r="5" fill="#55cc55"/>
+  <text x="450" y="37" text-anchor="middle" fill="#555" font-family="'Courier New',monospace" font-size="12" font-weight="bold">0xVSTVB0Y@terminal — bash — 80×24</text>
+
+  <!-- Terminal lines -->
+  <g clip-path="url(#c1)">
+    <text x="55" y="73" fill="#00ff41" font-family="'Courier New',monospace" font-size="16">
+      <tspan fill="#55cc55" font-weight="bold">vstvb0y@ace:~$</tspan>
+      <tspan fill="#00ff41"> ./init.sh</tspan>
+    </text>
+  </g>
+
+  <g clip-path="url(#c2)">
+    <text x="55" y="98" fill="#00ff41" font-family="'Courier New',monospace" font-size="16">
+      <tspan fill="#777">[</tspan>
+      <tspan fill="#ffcc00">INFO</tspan>
+      <tspan fill="#777">]</tspan>
+      <tspan fill="#aaa"> Initializing system...</tspan>
+    </text>
+  </g>
+
+  <g clip-path="url(#c3)">
+    <text x="55" y="123" fill="#00ff41" font-family="'Courier New',monospace" font-size="16">
+      <tspan fill="#777">[</tspan>
+      <tspan fill="#55cc55">OK</tspan>
+      <tspan fill="#777">]</tspan>
+      <tspan fill="#00ff41"> Oracle ACE Associate detected</tspan>
+    </text>
+  </g>
+
+  <g clip-path="url(#c4)">
+    <text x="55" y="148" fill="#00ff41" font-family="'Courier New',monospace" font-size="16">
+      <tspan fill="#777">[</tspan>
+      <tspan fill="#55cc55">OK</tspan>
+      <tspan fill="#777">]</tspan>
+      <tspan fill="#00ff41"> System ready — Mohamed A. Abdelkhaleq</tspan>
+    </text>
+  </g>
+
+  <!-- Blinking cursor -->
+  <rect x="468" y="151" width="11" height="16" fill="#00ff41" class="cursor" rx="1"/>
+
+  <!-- Status bar -->
+  <rect x="30" y="176" width="840" height="26" fill="#161616" rx="3"/>
+  <text x="48" y="193" fill="#555" font-family="'Courier New',monospace" font-size="12" font-weight="bold">MODE: INSERT</text>
+  <text x="220" y="193" fill="#555" font-family="'Courier New',monospace" font-size="12" font-weight="bold">USER: 0xVSTVB0Y</text>
+  <text x="440" y="193" fill="#555" font-family="'Courier New',monospace" font-size="12" font-weight="bold">ROLE: FMW ENGINEER</text>
+  <circle cx="710" cy="189" r="4" fill="#00ff41" class="glow"/>
+  <text x="722" y="193" fill="#00ff41" font-family="'Courier New',monospace" font-size="12" font-weight="bold" class="glow">ONLINE</text>
+</svg>
