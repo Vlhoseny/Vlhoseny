@@ -1,95 +1,111 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="900" height="240">
   <defs>
     <style>
       @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-      @keyframes type1 { 0%{width:0} 25%{width:0} 40%{width:132px} 100%{width:132px} }
-      @keyframes type2 { 0%{width:0} 40%{width:0} 55%{width:156px} 100%{width:156px} }
-      @keyframes type3 { 0%{width:0} 55%{width:0} 70%{width:336px} 100%{width:336px} }
-      @keyframes type4 { 0%{width:0} 70%{width:0} 85%{width:360px} 100%{width:360px} }
-      @keyframes scanMove { 0%{transform:translateY(-220px)} 100%{transform:translateY(440px)} }
-      @keyframes glow { 0%,100%{opacity:.7} 50%{opacity:1} }
-      .cursor { animation: blink .7s step-end infinite }
-      .clip1 { animation: type1 6s steps(22) forwards }
-      .clip2 { animation: type2 6s steps(26) forwards }
-      .clip3 { animation: type3 6s steps(56) forwards }
-      .clip4 { animation: type4 6s steps(60) forwards }
-      .scanline { animation: scanMove 4s linear infinite }
-      .glow { animation: glow 2s ease-in-out infinite }
+      @keyframes type1 { 0%{width:0} 8%{width:300px} 75%{width:300px} 82%{width:0} 100%{width:0} }
+      @keyframes type2 { 0%{width:0} 8%{width:0} 18%{width:380px} 75%{width:380px} 82%{width:0} 100%{width:0} }
+      @keyframes type3 { 0%{width:0} 18%{width:0} 28%{width:450px} 75%{width:450px} 82%{width:0} 100%{width:0} }
+      @keyframes type4 { 0%{width:0} 28%{width:0} 38%{width:340px} 75%{width:340px} 82%{width:0} 100%{width:0} }
+      @keyframes type5 { 0%{width:0} 38%{width:0} 48%{width:460px} 75%{width:460px} 82%{width:0} 100%{width:0} }
+      @keyframes type6 { 0%{width:0} 48%{width:0} 58%{width:230px} 75%{width:230px} 82%{width:0} 100%{width:0} }
+      @keyframes cursorMove { 0%,58%{opacity:1} 59%,100%{opacity:0} }
+      @keyframes finalCursor { 0%,82%{opacity:0} 83%,100%{opacity:1} }
+      @keyframes lineFade { 0%,75%{opacity:1} 82%,100%{opacity:0} }
+      @keyframes finalText { 0%,82%{opacity:0} 83%{opacity:0;transform:translateY(10px)} 90%{opacity:1;transform:translateY(0)} 100%{opacity:1;transform:translateY(0)} }
+      .c1 { animation: type1 12s ease-in-out infinite }
+      .c2 { animation: type2 12s ease-in-out infinite }
+      .c3 { animation: type3 12s ease-in-out infinite }
+      .c4 { animation: type4 12s ease-in-out infinite }
+      .c5 { animation: type5 12s ease-in-out infinite }
+      .c6 { animation: type6 12s ease-in-out infinite }
+      .lfade { animation: lineFade 12s ease-in-out infinite }
+      .ftext { animation: finalText 12s ease-in-out infinite }
+      .fcursor { animation: finalCursor 12s step-end infinite }
+      .typecursor { animation: cursorMove 12s step-end infinite }
     </style>
-    <clipPath id="c1"><rect class="clip1" x="0" y="0" height="20"/></clipPath>
-    <clipPath id="c2"><rect class="clip2" x="0" y="0" height="20"/></clipPath>
-    <clipPath id="c3"><rect class="clip3" x="0" y="0" height="20"/></clipPath>
-    <clipPath id="c4"><rect class="clip4" x="0" y="0" height="20"/></clipPath>
-    <filter id="crt">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
-      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
-      <feBlend in="SourceGraphic" in2="grayNoise" mode="overlay" result="crtResult"/>
-    </filter>
+    <clipPath id="c1"><rect class="c1" x="0" y="0" height="22" fill="white"/></clipPath>
+    <clipPath id="c2"><rect class="c2" x="0" y="0" height="22" fill="white"/></clipPath>
+    <clipPath id="c3"><rect class="c3" x="0" y="0" height="22" fill="white"/></clipPath>
+    <clipPath id="c4"><rect class="c4" x="0" y="0" height="22" fill="white"/></clipPath>
+    <clipPath id="c5"><rect class="c5" x="0" y="0" height="22" fill="white"/></clipPath>
+    <clipPath id="c6"><rect class="c6" x="0" y="0" height="22" fill="white"/></clipPath>
   </defs>
 
-  <!-- Chassis -->
-  <rect width="900" height="220" fill="#0c0c0c" rx="10"/>
-  <rect x="3" y="3" width="894" height="214" fill="none" stroke="#1a3a1a" stroke-width="2" rx="8"/>
-  <rect x="6" y="6" width="888" height="208" fill="none" stroke="rgba(0,255,65,0.04)" stroke-width="1" rx="6"/>
+  <!-- Background -->
+  <rect width="900" height="240" fill="#0a0a0a" rx="10"/>
+  <rect x="3" y="3" width="894" height="234" fill="none" stroke="#3a0a0a" stroke-width="2" rx="8"/>
+  <rect x="6" y="6" width="888" height="228" fill="none" stroke="rgba(248,0,0,0.04)" stroke-width="1" rx="6"/>
 
-  <!-- Ambient glow edges -->
-  <rect x="6" y="6" width="888" height="208" fill="none" stroke="rgba(0,255,65,0.06)" stroke-width="1" rx="6"/>
-
-  <!-- Scanline overlay -->
-  <g class="scanline" opacity="0.04">
-    <line x1="0" y1="0" x2="900" y2="0" stroke="#00ff41" stroke-width="3"/>
+  <!-- Scanlines -->
+  <g opacity="0.03">
+    <pattern id="sl" width="3" height="3" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="3" y2="0" stroke="#f80000" stroke-width="1"/>
+    </pattern>
+    <rect width="900" height="240" fill="url(#sl)"/>
   </g>
 
   <!-- Title bar -->
-  <rect x="30" y="18" width="840" height="28" fill="#161616" rx="4"/>
-  <circle cx="48" cy="32" r="5" fill="#ff5555"/>
-  <circle cx="66" cy="32" r="5" fill="#ffaa33"/>
-  <circle cx="84" cy="32" r="5" fill="#55cc55"/>
-  <text x="450" y="37" text-anchor="middle" fill="#555" font-family="'Courier New',monospace" font-size="12" font-weight="bold">0xVSTVB0Y@terminal — bash — 80×24</text>
+  <rect x="30" y="15" width="840" height="28" fill="#111" rx="4"/>
+  <circle cx="48" cy="29" r="5" fill="#ff5555"/>
+  <circle cx="66" cy="29" r="5" fill="#ffaa33"/>
+  <circle cx="84" cy="29" r="5" fill="#55cc55"/>
+  <text x="450" y="34" text-anchor="middle" fill="#666" font-family="'Courier New',monospace" font-size="11" font-weight="bold">0xVSTVB0Y — ORACLE TERMINAL v2.4.1</text>
+  <text x="800" y="34" text-anchor="end" fill="#444" font-family="'Courier New',monospace" font-size="10">bash 5.2</text>
 
-  <!-- Terminal lines -->
-  <g clip-path="url(#c1)">
-    <text x="55" y="73" fill="#00ff41" font-family="'Courier New',monospace" font-size="16">
-      <tspan fill="#55cc55" font-weight="bold">vstvb0y@ace:~$</tspan>
-      <tspan fill="#00ff41"> ./init.sh</tspan>
-    </text>
+  <!-- Typing lines (all fade out after sequence) -->
+  <g class="lfade">
+    <!-- Line 1 -->
+    <g clip-path="url(#c1)">
+      <text x="50" y="75" fill="#f80000" font-family="'Courier New',monospace" font-size="16" font-weight="bold">vstvb0y@oracle:~$</text>
+      <text x="280" y="75" fill="#ffcc00" font-family="'Courier New',monospace" font-size="16">cat profile.txt</text>
+    </g>
+    <!-- Line 2 -->
+    <g clip-path="url(#c2)">
+      <text x="50" y="103" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
+      <text x="62" y="103" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
+      <text x="92" y="103" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
+      <text x="110" y="103" fill="#fff" font-family="'Courier New',monospace" font-size="15">Mohamed A. Abdelkhaleq</text>
+    </g>
+    <!-- Line 3 -->
+    <g clip-path="url(#c3)">
+      <text x="50" y="128" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
+      <text x="62" y="128" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
+      <text x="92" y="128" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
+      <text x="110" y="128" fill="#ddd" font-family="'Courier New',monospace" font-size="15">Fusion Middleware Engineer</text>
+    </g>
+    <!-- Line 4 -->
+    <g clip-path="url(#c4)">
+      <text x="50" y="153" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
+      <text x="62" y="153" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
+      <text x="92" y="153" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
+      <text x="110" y="153" fill="#ffcc00" font-family="'Courier New',monospace" font-size="15">Oracle ACE Associate</text>
+    </g>
+    <!-- Line 5 -->
+    <g clip-path="url(#c5)">
+      <text x="50" y="178" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
+      <text x="62" y="178" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
+      <text x="92" y="178" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
+      <text x="110" y="178" fill="#ddd" font-family="'Courier New',monospace" font-size="15">Stack: OCI · WebLogic 12c/14c · SOA · OSB</text>
+    </g>
+    <!-- Line 6 -->
+    <g clip-path="url(#c6)">
+      <text x="50" y="203" fill="#00cc66" font-family="'Courier New',monospace" font-size="15">[</text>
+      <text x="62" y="203" fill="#00cc66" font-family="'Courier New',monospace" font-size="15" font-weight="bold">DONE</text>
+      <text x="110" y="203" fill="#00cc66" font-family="'Courier New',monospace" font-size="15">System ready — Profile loaded successfully</text>
+    </g>
   </g>
 
-  <g clip-path="url(#c2)">
-    <text x="55" y="98" fill="#00ff41" font-family="'Courier New',monospace" font-size="16">
-      <tspan fill="#777">[</tspan>
-      <tspan fill="#ffcc00">INFO</tspan>
-      <tspan fill="#777">]</tspan>
-      <tspan fill="#aaa"> Initializing system...</tspan>
-    </text>
+  <!-- Typing cursor -->
+  <rect x="280" y="78" width="10" height="15" fill="#ffcc00" class="typecursor" rx="1"/>
+
+  <!-- Final persistent state after sequence -->
+  <g class="ftext">
+    <text x="50" y="103" fill="#f80000" font-family="'Courier New',monospace" font-size="14" font-weight="bold">vstvb0y@oracle:~$</text>
+    <text x="210" y="103" fill="#ffcc00" font-family="'Courier New',monospace" font-size="14">whoami</text>
+    <text x="50" y="135" fill="#fff" font-family="'Courier New',monospace" font-size="16" font-weight="bold">Mohamed A. Abdelkhaleq</text>
+    <text x="50" y="162" fill="#aaa" font-family="'Courier New',monospace" font-size="14">Fusion Middleware Engineer · Oracle ACE Associate</text>
+    <text x="50" y="189" fill="#888" font-family="'Courier New',monospace" font-size="13">OCI · WebLogic 12c/14c · SOA · OSB · Docker · Python · Git</text>
+    <!-- Final cursor -->
+    <rect x="280" y="106" width="10" height="15" fill="#ffcc00" class="fcursor" rx="1"/>
   </g>
-
-  <g clip-path="url(#c3)">
-    <text x="55" y="123" fill="#00ff41" font-family="'Courier New',monospace" font-size="16">
-      <tspan fill="#777">[</tspan>
-      <tspan fill="#55cc55">OK</tspan>
-      <tspan fill="#777">]</tspan>
-      <tspan fill="#00ff41"> Oracle ACE Associate detected</tspan>
-    </text>
-  </g>
-
-  <g clip-path="url(#c4)">
-    <text x="55" y="148" fill="#00ff41" font-family="'Courier New',monospace" font-size="16">
-      <tspan fill="#777">[</tspan>
-      <tspan fill="#55cc55">OK</tspan>
-      <tspan fill="#777">]</tspan>
-      <tspan fill="#00ff41"> System ready — Mohamed A. Abdelkhaleq</tspan>
-    </text>
-  </g>
-
-  <!-- Blinking cursor -->
-  <rect x="468" y="151" width="11" height="16" fill="#00ff41" class="cursor" rx="1"/>
-
-  <!-- Status bar -->
-  <rect x="30" y="176" width="840" height="26" fill="#161616" rx="3"/>
-  <text x="48" y="193" fill="#555" font-family="'Courier New',monospace" font-size="12" font-weight="bold">MODE: INSERT</text>
-  <text x="220" y="193" fill="#555" font-family="'Courier New',monospace" font-size="12" font-weight="bold">USER: 0xVSTVB0Y</text>
-  <text x="440" y="193" fill="#555" font-family="'Courier New',monospace" font-size="12" font-weight="bold">ROLE: FMW ENGINEER</text>
-  <circle cx="710" cy="189" r="4" fill="#00ff41" class="glow"/>
-  <text x="722" y="193" fill="#00ff41" font-family="'Courier New',monospace" font-size="12" font-weight="bold" class="glow">ONLINE</text>
 </svg>
