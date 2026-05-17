@@ -39,18 +39,6 @@
 
 ---
 
-## 🏆 ACHIEVEMENTS
-
-<p align="center">
-  <img src="https://img.shields.io/badge/ECPC_2024-1st_Place-FFD700?style=for-the-badge&labelColor=1a1a1a&color=FFD700" />
-  <img src="https://img.shields.io/badge/ECPC_2023-2nd_Place-C0C0C0?style=for-the-badge&labelColor=1a1a1a&color=C0C0C0" />
-  <img src="https://img.shields.io/badge/TryHackMe-Top_5%25-00ff41?style=for-the-badge&labelColor=1a1a1a&color=00ff41" />
-  <img src="https://img.shields.io/badge/OCI_Foundations-000?style=for-the-badge&logo=oracle&logoColor=F80000&labelColor=1a1a1a&color=F80000" />
-  <img src="https://img.shields.io/badge/OCI_Architect-000?style=for-the-badge&logo=oracle&logoColor=F80000&labelColor=1a1a1a&color=F80000" />
-</p>
-
----
-
 ## 👻 PAC-MAN CONTRIBUTION GRAPH
 
 <picture>

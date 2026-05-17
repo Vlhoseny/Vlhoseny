@@ -2,29 +2,31 @@
   <defs>
     <style>
       @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-      @keyframes fadeIn1 { 0%,4%{opacity:0} 8%,85%{opacity:1} 90%,100%{opacity:0} }
-      @keyframes fadeIn2 { 0%,8%{opacity:0} 12%,85%{opacity:1} 90%,100%{opacity:0} }
-      @keyframes fadeIn3 { 0%,12%{opacity:0} 16%,85%{opacity:1} 90%,100%{opacity:0} }
-      @keyframes fadeIn4 { 0%,16%{opacity:0} 20%,85%{opacity:1} 90%,100%{opacity:0} }
-      @keyframes fadeIn5 { 0%,20%{opacity:0} 24%,85%{opacity:1} 90%,100%{opacity:0} }
-      @keyframes fadeIn6 { 0%,24%{opacity:0} 28%,85%{opacity:1} 90%,100%{opacity:0} }
-      @keyframes fadeIn7 { 0%,28%{opacity:0} 32%,85%{opacity:1} 90%,100%{opacity:0} }
-      @keyframes finalShow { 0%,90%{opacity:0} 94%,100%{opacity:1} }
-      @keyframes cursorType { 0%,7%{opacity:0} 8%,32%{opacity:1} 33%,85%{opacity:0} 86%,100%{opacity:0} }
-      @keyframes glow { 0%,100%{opacity:.6} 50%{opacity:1} }
-
-      .l1 { animation: fadeIn1 75s ease-in-out infinite }
-      .l2 { animation: fadeIn2 75s ease-in-out infinite }
-      .l3 { animation: fadeIn3 75s ease-in-out infinite }
-      .l4 { animation: fadeIn4 75s ease-in-out infinite }
-      .l5 { animation: fadeIn5 75s ease-in-out infinite }
-      .l6 { animation: fadeIn6 75s ease-in-out infinite }
-      .l7 { animation: fadeIn7 75s ease-in-out infinite }
-      .final { animation: finalShow 75s ease-in-out infinite }
-      .typec { animation: cursorType 75s step-end infinite }
-      .blink { animation: blink .7s step-end infinite }
-      .glow { animation: glow 2s ease-in-out infinite }
+      @keyframes type1 { 0%{transform:scaleX(0)} 6%{transform:scaleX(1)} 82%{transform:scaleX(1)} 88%{transform:scaleX(0)} 100%{transform:scaleX(0)} }
+      @keyframes type2 { 0%{transform:scaleX(0)} 6%{transform:scaleX(0)} 12%{transform:scaleX(1)} 82%{transform:scaleX(1)} 88%{transform:scaleX(0)} 100%{transform:scaleX(0)} }
+      @keyframes type3 { 0%{transform:scaleX(0)} 12%{transform:scaleX(0)} 18%{transform:scaleX(1)} 82%{transform:scaleX(1)} 88%{transform:scaleX(0)} 100%{transform:scaleX(0)} }
+      @keyframes type4 { 0%{transform:scaleX(0)} 18%{transform:scaleX(0)} 24%{transform:scaleX(1)} 82%{transform:scaleX(1)} 88%{transform:scaleX(0)} 100%{transform:scaleX(0)} }
+      @keyframes type5 { 0%{transform:scaleX(0)} 24%{transform:scaleX(0)} 30%{transform:scaleX(1)} 82%{transform:scaleX(1)} 88%{transform:scaleX(0)} 100%{transform:scaleX(0)} }
+      @keyframes type6 { 0%{transform:scaleX(0)} 30%{transform:scaleX(0)} 36%{transform:scaleX(1)} 82%{transform:scaleX(1)} 88%{transform:scaleX(0)} 100%{transform:scaleX(0)} }
+      @keyframes finalShow { 0%,88%{opacity:0} 92%,100%{opacity:1} }
+      @keyframes cursorFlash { 0%,100%{opacity:1} 50%{opacity:0} }
+      @keyframes cursorType { 0%,5%{opacity:0} 6%,36%{opacity:1} 37%,87%{opacity:0} 88%,100%{opacity:0} }
+      .cr1 { animation:type1 45s ease-in-out infinite; transform-origin:50px 68px }
+      .cr2 { animation:type2 45s ease-in-out infinite; transform-origin:70px 99px }
+      .cr3 { animation:type3 45s ease-in-out infinite; transform-origin:70px 126px }
+      .cr4 { animation:type4 45s ease-in-out infinite; transform-origin:70px 153px }
+      .cr5 { animation:type5 45s ease-in-out infinite; transform-origin:70px 180px }
+      .cr6 { animation:type6 45s ease-in-out infinite; transform-origin:70px 207px }
+      .final { animation:finalShow 45s ease-in-out infinite }
+      .typec { animation:cursorType 45s step-end infinite }
+      .blink { animation:cursorFlash .7s step-end infinite }
     </style>
+    <clipPath id="cp1"><rect class="cr1" x="50" y="60" width="400" height="24"/></clipPath>
+    <clipPath id="cp2"><rect class="cr2" x="70" y="92" width="400" height="22"/></clipPath>
+    <clipPath id="cp3"><rect class="cr3" x="70" y="119" width="400" height="22"/></clipPath>
+    <clipPath id="cp4"><rect class="cr4" x="70" y="146" width="400" height="22"/></clipPath>
+    <clipPath id="cp5"><rect class="cr5" x="70" y="173" width="400" height="22"/></clipPath>
+    <clipPath id="cp6"><rect class="cr6" x="70" y="200" width="400" height="22"/></clipPath>
   </defs>
 
   <!-- Background -->
@@ -38,9 +40,6 @@
   </pattern>
   <rect width="900" height="250" fill="url(#scan)"/>
 
-  <!-- Ambient glow -->
-  <rect x="30" y="50" width="840" height="185" fill="none" stroke="rgba(248,0,0,0.05)" stroke-width="1" rx="4"/>
-
   <!-- Title bar -->
   <rect x="30" y="15" width="840" height="28" fill="#111" rx="4"/>
   <circle cx="48" cy="29" r="4.5" fill="#ff5555"/>
@@ -49,17 +48,15 @@
   <text x="450" y="34" text-anchor="middle" fill="#666" font-family="'Courier New',monospace" font-size="11" font-weight="bold">0xVSTVB0Y — ORACLE TERMINAL</text>
   <text x="800" y="34" text-anchor="end" fill="#444" font-family="'Courier New',monospace" font-size="10">bash 5.2</text>
 
-  <!-- TYPING PHASE: each line fades in sequentially, stays ~50s, fades out -->
-
-  <!-- Line 1: prompt -->
-  <g class="l1">
+  <!-- Line 1: prompt + command -->
+  <g clip-path="url(#cp1)">
     <text x="50" y="75" fill="#f80000" font-family="'Courier New',monospace" font-size="17" font-weight="bold">vstvb0y@oracle:~$</text>
     <text x="270" y="75" fill="#ffcc00" font-family="'Courier New',monospace" font-size="17">cat .profile</text>
     <rect x="385" y="78" width="9" height="14" fill="#ffcc00" class="typec" rx="1"/>
   </g>
 
   <!-- Line 2: name -->
-  <g class="l2">
+  <g clip-path="url(#cp2)">
     <text x="70" y="106" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
     <text x="82" y="106" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
     <text x="112" y="106" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
@@ -67,7 +64,7 @@
   </g>
 
   <!-- Line 3: title -->
-  <g class="l3">
+  <g clip-path="url(#cp3)">
     <text x="70" y="133" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
     <text x="82" y="133" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
     <text x="112" y="133" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
@@ -75,7 +72,7 @@
   </g>
 
   <!-- Line 4: ace -->
-  <g class="l4">
+  <g clip-path="url(#cp4)">
     <text x="70" y="160" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
     <text x="82" y="160" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
     <text x="112" y="160" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
@@ -83,7 +80,7 @@
   </g>
 
   <!-- Line 5: stack -->
-  <g class="l5">
+  <g clip-path="url(#cp5)">
     <text x="70" y="187" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
     <text x="82" y="187" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
     <text x="112" y="187" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
@@ -91,30 +88,21 @@
   </g>
 
   <!-- Line 6: certs -->
-  <g class="l6">
+  <g clip-path="url(#cp6)">
     <text x="70" y="214" fill="#888" font-family="'Courier New',monospace" font-size="15">[</text>
     <text x="82" y="214" fill="#f80000" font-family="'Courier New',monospace" font-size="15" font-weight="bold">OK</text>
     <text x="112" y="214" fill="#888" font-family="'Courier New',monospace" font-size="15">]</text>
     <text x="130" y="214" fill="#aaa" font-family="'Courier New',monospace" font-size="15">Certs: OCI Foundations · OCI Architect · WebLogic</text>
   </g>
 
-  <!-- FINAL STATE: appears after typing block disappears -->
+  <!-- Final state -->
   <g class="final">
-    <!-- Prompt -->
     <text x="50" y="110" fill="#f80000" font-family="'Courier New',monospace" font-size="16" font-weight="bold">vstvb0y@oracle:~$</text>
     <text x="200" y="110" fill="#ffcc00" font-family="'Courier New',monospace" font-size="16">whoami</text>
-
-    <!-- Arrow + Name -->
     <text x="70" y="148" fill="#f80000" font-family="'Courier New',monospace" font-size="14" font-weight="bold">➜</text>
     <text x="95" y="148" fill="#fff" font-family="'Courier New',monospace" font-size="17" font-weight="bold">Mohamed A. Abdelkhaleq</text>
-
-    <!-- Title -->
     <text x="95" y="176" fill="#aaa" font-family="'Courier New',monospace" font-size="13">Fusion Middleware Engineer · Oracle ACE Associate</text>
-
-    <!-- Skills line -->
     <text x="95" y="202" fill="#777" font-family="'Courier New',monospace" font-size="12">OCI · WebLogic 12c/14c · SOA · OSB · Docker · Python · Git</text>
-
-    <!-- Blinking cursor -->
     <rect x="340" y="113" width="9" height="14" fill="#ffcc00" class="blink" rx="1"/>
   </g>
 </svg>
