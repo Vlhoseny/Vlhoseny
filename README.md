@@ -1,148 +1,67 @@
-<p align="center">
-  <img src="pacman-header.svg" width="100%" alt="Pac-Man Header" />
-</p>
+<h1 align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" />
+  Hi👋, I'm Mohamed A. Abdelkhaleq
+  <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" />
+</h1>
 
-<p align="center">
-  <img src="snake-contrib.svg" width="100%" alt="Snake Contribution" />
-</p>
+<h3 align="center">Fusion Middleware Engineer | Oracle ACE Associate | Cloud Engineer</h3>
 
----
+###
 
-```ascii
-╔══════════════════════════════════════════════════════════════════════╗
-║                    PLAYER PROFILE // 0xVSTVB0Y                      ║
-╠══════════════════════════════════════════════════════════════════════╣
-║                                                                      ║
-║  CLASS:      Fusion Middleware Engineer                              ║
-║  RANK:       Oracle ACE Associate                                    ║
-║  GUILD:      @iConcierge.eg                                         ║
-║  SERVER:     Cairo, Egypt                                            ║
-║  STATUS:     🟢 ONLINE                                               ║
-║  HP:         ████████████████████░░░░░░░ 76/100                      ║
-║  XP:         ██████████████████████████░░ 90%                        ║
-║  STREAK:     ⚡ 47 days                                               ║
-║                                                                      ║
-╚══════════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## 🏆 ACHIEVEMENTS UNLOCKED
-
-| BADGE | ACHIEVEMENT | DESCRIPTION |
-|-------|-------------|-------------|
-| 🏅 | **Oracle ACE Associate** | Recognized by Oracle for technical expertise & community contributions |
-| 🥇 | **ECPC 2024 — 1st Place** | Faculty-level competitive programming champion |
-| 🥈 | **ECPC 2023 — 2nd Place** | Faculty-level competitive programming runner-up |
-| 🔥 | **TryHackMe Top 5%** | Elite ranking among 2M+ cybersecurity learners |
-| ☁️ | **OCI Certified** | Oracle Cloud Infrastructure Foundations + Architect Associate |
-| 👻 | **Blue Team Operator** | Threat detection, SIEM, and log analysis specialist |
-
----
-
-## ⚔️ SKILL TREE
-
-### 🟡 PRIMARY WEAPONS
-```
-ORACLE FMW    ████████████████████░░  92%  [WebLogic/SOA/OSB]
-OCI CLOUD     ██████████████████░░░░  85%  [Infra & Architect]
-PYTHON        ████████████████░░░░░░  72%  [Automation/Scripts]
-JAVASCRIPT    ██████████████░░░░░░░░  65%  [React/Node.js]
-```
-
-### 🔵 UTILITY BELT
-```
-DOCKER        ████████████████░░░░░░  70%
-JENKINS       ██████████████░░░░░░░░  60%
-GIT           ████████████████░░░░░░  75%
-SQL           ██████████████░░░░░░░░  60%
-LINUX         ██████████████████░░░░  82%
-```
-
-### 🟣 CYBERSEC LOADOUT
-```
-QRADAR        ████████████████░░░░░░  68%
-NMAP          ████████████████░░░░░░  70%
-THREAT HUNT   ██████████████░░░░░░░░  62%
-SIEM OPS      ████████████████░░░░░░  65%
-```
-
----
-
-## 📜 QUEST LOG
-
-<details open>
-<summary><strong>🟢 ACTIVE QUESTS</strong></summary>
-
-| QUEST | LOCATION | STATUS | XP REWARD |
-|-------|----------|--------|-----------|
-| Software Engineering Intern | @iConcierge.eg | 🔄 In Progress | +5000 XP |
-| GDGoC SVU Lead | South Valley University | 🎯 Active | +3000 XP |
-| ICPC HUN Vice-Lead | Faculty of CS & AI | 🎯 Active | +2500 XP |
-
-</details>
-
-<details>
-<summary><strong>✅ COMPLETED QUESTS</strong></summary>
-
-| QUEST | LOCATION | REWARD |
-|-------|----------|--------|
-| Cybersecurity Intern | CyberX | 🛡️ Blue Team Badge |
-| NASA Space Apps Mentor | NASA Space Apps | 🚀 Cloud Mentor Badge |
-| GDG Cybersecurity Head | Hurghada | 🎓 Trained 300+ students |
-| Stride Workspace | Personal Project | ⚡ Full-stack Time Mgmt |
-
-</details>
-
----
-
-## 🎮 MINI-GAME: SNAKE
-
-> *Collect skills, grow stronger!*
-
-Want to play? Check out the [interactive Snake game](snake-game.html) — or run it locally:
-
-```bash
-# Clone the profile repo
-git clone https://github.com/Vlhoseny/Vlhoseny.git
-cd Vlhoseny
-# Open snake-game.html in your browser
-start snake-game.html
-```
-
-**High Score:** 🏆 Beat it if you can!
-
----
-
-## 📡 CONNECT WITH ME
-
-<p align="center">
-  <a href="https://0xvstvb0yportfolio.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-0xVSTVB0Y-ffcc00?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/>
+<div align="center">
+  <a href="https://www.linkedin.com/in/mohammedabdulrahim-/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo" />
   </a>
-  <a href="https://www.linkedin.com/in/mohammedabdulrahim-/">
-    <img src="https://img.shields.io/badge/LinkedIn-Mohammed_Abdulrahim-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  <a href="mailto:Mohamedabdulrahim4work@gmail.com" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="gmail logo" />
   </a>
-  <a href="mailto:Mohamedabdulrahim4work@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  <a href="https://0xvstvb0yportfolio.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Portfolio&logo=vercel&label=&color=000000&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="portfolio logo" />
   </a>
-  <a href="https://ace.oracle.com/0xVSTVB0Y">
-    <img src="https://img.shields.io/badge/Oracle_ACE-Profile-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle ACE"/>
+  <a href="https://ace.oracle.com/0xVSTVB0Y" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Oracle+ACE&logo=oracle&label=&color=F80000&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="oracle ace logo" />
   </a>
-</p>
+</div>
 
----
+###
 
-<p align="center">
-  <img src="https://img.shields.io/badge/STATUS-ONLINE-brightgreen?style=flat-square" />
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=Vlhoseny.Vlhoseny" alt="visitors"/>
-  <img src="https://img.shields.io/github/followers/Vlhoseny?style=flat-square&label=Followers" alt="followers"/>
-</p>
+<div align="center">
 
----
+<!-- Oracle & Cloud -->
+[![Oracle](https://skillicons.dev/icons?i=oracle)](https://www.oracle.com)
+[![AWS](https://skillicons.dev/icons?i=aws)](https://aws.amazon.com/)
+[![Azure](https://skillicons.dev/icons?i=azure)](https://azure.microsoft.com/)
 
-```ascii
-╔══════════════════════════════════════════════════════════════════════╗
-║              PRESS START // GAME OVER — CONTINUE?                    ║
-╚══════════════════════════════════════════════════════════════════════╝
-```
+<!-- Languages -->
+[![C++](https://skillicons.dev/icons?i=cpp)](https://w3schools.com/cpp)
+[![Python](https://skillicons.dev/icons?i=py)](https://python.org)
+[![JavaScript](https://skillicons.dev/icons?i=js)](https://w3schools.com/js)
+[![TypeScript](https://skillicons.dev/icons?i=ts)](https://www.typescriptlang.org/)
+[![HTML](https://skillicons.dev/icons?i=html)](https://w3schools.com/html/)
+[![CSS](https://skillicons.dev/icons?i=css)](https://w3schools.com/css)
+
+</div>
+
+<div align="center">
+
+<!-- DevOps & Tools -->
+[![Docker](https://skillicons.dev/icons?i=docker)](https://docker.com)
+[![Jenkins](https://skillicons.dev/icons?i=jenkins)](https://jenkins.io)
+[![Git](https://skillicons.dev/icons?i=git)](https://git-scm.com)
+[![Linux](https://skillicons.dev/icons?i=linux)](https://linux.org)
+[![Bash](https://skillicons.dev/icons?i=bash)](https://www.gnu.org/software/bash/)
+[![MySQL](https://skillicons.dev/icons?i=mysql)](https://mysql.com)
+[![PostgreSQL](https://skillicons.dev/icons?i=postgres)](https://www.postgresql.org/)
+[![React](https://skillicons.dev/icons?i=react)](https://react.dev)
+[![Node.js](https://skillicons.dev/icons?i=nodejs)](https://nodejs.org)
+[![Next.js](https://skillicons.dev/icons?i=nextjs)](https://nextjs.org)
+
+</div>
+
+###
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vlhoseny/Vlhoseny/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vlhoseny/Vlhoseny/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Vlhoseny/Vlhoseny/output/pacman-contribution-graph.svg">
+</picture>
