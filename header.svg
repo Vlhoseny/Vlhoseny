@@ -50,7 +50,7 @@
 
   <!-- Line 1: prompt + command -->
   <g clip-path="url(#cp1)">
-    <text x="50" y="75" fill="#f80000" font-family="'Courier New',monospace" font-size="17" font-weight="bold">vstvb0y@oracle:~$</text>
+    <text x="50" y="75" fill="#f80000" font-family="'Courier New',monospace" font-size="17" font-weight="bold">0xVSTVB0Y@oracle:~$</text>
     <text x="270" y="75" fill="#ffcc00" font-family="'Courier New',monospace" font-size="17">cat .profile</text>
     <rect x="385" y="78" width="9" height="14" fill="#ffcc00" class="typec" rx="1"/>
   </g>
